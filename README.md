@@ -37,3 +37,4 @@ Ethical Use Warning: The tools located in the pentest-tools directory are for ed
 2. Navigate to the desired folder.
 
 3. Run any script using: python script_name.py
+```
