@@ -29,7 +29,7 @@ def align_formatting(table_numb, end_numb):
 
 def main():
     while True:
-        print("\n -------------- 🧮 Times Table Program -------")
+        print(f"\n {'-'*7} 🧮 Times Table Program {'-'*7}")
         table_number = times_table()
         table_end = how_far()
         print("\n 🍰 Your Desired Table - \n")
