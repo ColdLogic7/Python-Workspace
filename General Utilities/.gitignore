@@ -1,1 +1,2 @@
-E:\programming\scripts\temp.py
+# Ignore Environment variables
+.env
